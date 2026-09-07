@@ -1208,7 +1208,607 @@
       }
     }
 
-  </style>
+  
+    /* ===== V20 — mobile typography & manifesto fixes ===== */
+    @media(max-width:680px){
+      .intro-statement{
+        line-height:1.08 !important;
+        letter-spacing:-.045em !important;
+      }
+      .intro-copy p,
+      .question-row p,
+      .journey-head p,
+      .module-copy p,
+      .edge-side .lead,
+      .signature-assets .asset-row small,
+      .principle p,
+      .coach-lead,
+      .process-head p,
+      .process-step p{
+        line-height:1.52 !important;
+      }
+
+      .journey-head h2{
+        font-size:clamp(28px,8.3vw,38px) !important;
+        line-height:1.02 !important;
+        letter-spacing:-.055em !important;
+        white-space:nowrap !important;
+      }
+
+      .manifesto{
+        overflow:hidden;
+      }
+      .manifesto-line{
+        font-size:clamp(54px,16vw,76px) !important;
+        line-height:.86 !important;
+        letter-spacing:-.07em !important;
+        white-space:normal !important;
+        overflow:visible !important;
+        max-width:100% !important;
+        word-break:normal !important;
+      }
+      .manifesto-line.outline{
+        -webkit-text-stroke:1px rgba(233,233,231,.8) !important;
+      }
+      .principles{
+        margin-top:38px !important;
+      }
+
+      .journey .module{
+        padding-top:28px !important;
+        padding-bottom:30px !important;
+      }
+      .journey .module-copy{
+        margin-top:14px !important;
+      }
+      .journey .module-apply{
+        margin-top:22px !important;
+      }
+    }
+
+    @media(max-width:390px){
+      .journey-head h2{
+        font-size:26px !important;
+        letter-spacing:-.045em !important;
+      }
+      .manifesto-line{
+        font-size:52px !important;
+      }
+    }
+
+  
+    /* ===== V21 — clarify THINKING vs BUILDING ===== */
+    .journey .module-copy{
+      align-self:center;
+    }
+    .journey .module-copy p{
+      max-width:780px;
+      margin-bottom:0;
+    }
+    .edge-side > .lead{
+      max-width:780px;
+    }
+    .signature-assets .asset-row strong{
+      font-size:22px;
+    }
+    @media(max-width:680px){
+      .journey .module{
+        min-height:auto !important;
+      }
+      .journey .module-copy{
+        margin-top:12px !important;
+      }
+      .signature-assets .asset-row strong{
+        font-size:19px;
+      }
+    }
+
+  
+    /* ===== V22 — merged 4A thinking discipline ===== */
+    .journey .module-copy{
+      display:grid;
+      gap:14px;
+    }
+    .journey .module-copy p{
+      max-width:800px;
+      margin:0;
+    }
+    .journey-closing{
+      margin-top:72px;
+      padding:38px 0 0;
+      border-top:1px solid var(--line);
+      display:grid;
+      grid-template-columns:.42fr 1.08fr;
+      column-gap:56px;
+      row-gap:16px;
+      align-items:start;
+    }
+    .journey-closing-kicker{
+      grid-row:1 / span 3;
+      font-size:10px;
+      letter-spacing:.09em;
+      text-transform:uppercase;
+      opacity:.48;
+      padding-top:7px;
+    }
+    .journey-closing h3{
+      font-size:clamp(34px,3.3vw,54px);
+      line-height:.96;
+      letter-spacing:-.05em;
+      font-weight:550;
+      margin:0 0 6px;
+      max-width:900px;
+    }
+    .journey-closing p{
+      font-size:15px;
+      line-height:1.58;
+      max-width:820px;
+      margin:0;
+      color:rgba(1,28,28,.7);
+    }
+    .journey-closing p strong{
+      color:var(--ink);
+      font-weight:600;
+    }
+    @media(max-width:760px){
+      .journey-closing{
+        margin-top:48px;
+        padding-top:28px;
+        grid-template-columns:1fr;
+        gap:14px;
+      }
+      .journey-closing-kicker{
+        grid-row:auto;
+        padding-top:0;
+      }
+      .journey-closing h3{
+        font-size:34px;
+      }
+      .journey-closing p{
+        font-size:14px;
+        line-height:1.55;
+      }
+    }
+
+  
+    /* ===== V23 — 4 thinking shifts ===== */
+    .journey-closing{
+      margin-top:88px;
+      padding-top:0;
+      border-top:0;
+      display:block;
+    }
+    .journey-closing-statement{
+      padding:54px 0 58px;
+      border-top:1px solid var(--line);
+    }
+    .journey-closing-statement h3{
+      width:min(1080px,92%);
+      margin:0;
+      font-size:clamp(48px,5.5vw,86px);
+      line-height:.94;
+      letter-spacing:-.065em;
+      font-weight:500;
+    }
+    .thinking-shifts{
+      display:grid;
+      grid-template-columns:repeat(4,minmax(0,1fr));
+      border-top:1px solid var(--ink);
+      border-left:1px solid var(--ink);
+    }
+    .thinking-shift{
+      position:relative;
+      min-height:330px;
+      padding:20px 20px 24px;
+      border-right:1px solid var(--ink);
+      border-bottom:1px solid var(--ink);
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      overflow:hidden;
+      transition:background .28s ease,color .28s ease;
+    }
+    .thinking-shift::after{
+      content:"";
+      position:absolute;
+      width:180px;
+      height:180px;
+      border-radius:50%;
+      right:-92px;
+      top:-92px;
+      background:#66F3ED;
+      transform:scale(.15);
+      transform-origin:center;
+      opacity:0;
+      transition:transform .4s cubic-bezier(.2,.8,.2,1),opacity .25s ease;
+      pointer-events:none;
+    }
+    .thinking-shift:hover{
+      background:#011C1C;
+      color:#E9E9E7;
+    }
+    .thinking-shift:hover::after{
+      transform:scale(1);
+      opacity:1;
+    }
+    .shift-no{
+      position:relative;
+      z-index:1;
+      font-size:10px;
+      letter-spacing:.08em;
+      opacity:.45;
+    }
+    .thinking-shift strong{
+      position:relative;
+      z-index:1;
+      display:block;
+      font-size:clamp(24px,2.25vw,36px);
+      line-height:.94;
+      letter-spacing:-.055em;
+      font-weight:550;
+      max-width:95%;
+    }
+
+    @media(max-width:960px){
+      .thinking-shifts{grid-template-columns:repeat(2,1fr)}
+      .thinking-shift{min-height:250px}
+    }
+
+    @media(max-width:680px){
+      .journey-closing{
+        margin-top:56px;
+      }
+      .journey-closing-statement{
+        padding:36px 0 38px;
+      }
+      .journey-closing-statement h3{
+        width:100%;
+        font-size:42px;
+        line-height:.98;
+      }
+      .thinking-shifts{
+        grid-template-columns:1fr 1fr;
+      }
+      .thinking-shift{
+        min-height:190px;
+        padding:15px;
+      }
+      .thinking-shift strong{
+        font-size:23px;
+        line-height:.96;
+      }
+      .thinking-shift::after{
+        display:none;
+      }
+    }
+
+    @media(max-width:390px){
+      .journey-closing-statement h3{
+        font-size:38px;
+      }
+      .thinking-shift strong{
+        font-size:20px;
+      }
+    }
+
+  
+    /* ===== V24 — map principle to destination ===== */
+    .manifesto{
+      padding:clamp(110px,11vw,180px) 0;
+      background:#011C1C;
+      color:#E9E9E7;
+    }
+    .manifesto-map{
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      gap:clamp(50px,7vw,120px);
+      align-items:end;
+    }
+    .manifesto-main{
+      position:relative;
+    }
+    .manifesto-main::after{
+      content:"";
+      position:absolute;
+      right:-58px;
+      top:50%;
+      width:74px;
+      height:1px;
+      background:rgba(102,243,237,.55);
+    }
+    .manifesto-main::before{
+      content:"";
+      position:absolute;
+      right:-58px;
+      top:calc(50% - 4px);
+      width:9px;
+      height:9px;
+      border-top:1px solid rgba(102,243,237,.7);
+      border-right:1px solid rgba(102,243,237,.7);
+      transform:rotate(45deg);
+    }
+    .manifesto-destination{
+      padding-bottom:4px;
+    }
+    .manifesto-link-label{
+      display:block;
+      margin-bottom:16px;
+      font-size:10px;
+      letter-spacing:.1em;
+      text-transform:uppercase;
+      color:#66F3ED;
+    }
+    .manifesto-destination h3{
+      margin:0;
+      max-width:720px;
+      font-size:clamp(38px,4.2vw,68px);
+      line-height:.96;
+      letter-spacing:-.055em;
+      font-weight:500;
+      color:#E9E9E7;
+    }
+
+    /* V24 — 4 shifts now follow the mapped manifesto */
+    .journey-closing{
+      margin-top:64px !important;
+      padding-top:0 !important;
+      border-top:0 !important;
+    }
+    .thinking-shifts{
+      margin-top:0;
+    }
+
+    @media(max-width:900px){
+      .manifesto-map{
+        grid-template-columns:1fr;
+        gap:40px;
+      }
+      .manifesto-main::after,
+      .manifesto-main::before{
+        display:none;
+      }
+      .manifesto-destination{
+        padding-top:28px;
+        border-top:1px solid rgba(233,233,231,.18);
+      }
+    }
+
+    @media(max-width:680px){
+      .manifesto{
+        padding:88px 0;
+      }
+      .manifesto-destination h3{
+        font-size:36px;
+        line-height:1;
+      }
+      .manifesto-link-label{
+        margin-bottom:12px;
+      }
+    }
+
+  
+/* ===== V25 — unified cyan manifesto ===== */
+.manifesto-v25{
+  position:relative;
+  padding:0;
+  background:#66F3ED !important;
+  color:#011C1C !important;
+  overflow:hidden;
+}
+.manifesto-v25-wrap{
+  padding-top:clamp(80px,8vw,132px);
+  padding-bottom:clamp(64px,7vw,112px);
+}
+.manifesto-v25-top{
+  display:grid;
+  grid-template-columns:minmax(0,1.42fr) minmax(320px,.58fr);
+  gap:clamp(60px,9vw,150px);
+  align-items:end;
+  padding-bottom:clamp(70px,8vw,120px);
+}
+.manifesto-v25-eyebrow{
+  display:block;
+  margin-bottom:20px;
+  font-size:10px;
+  line-height:1;
+  letter-spacing:.12em;
+  font-weight:600;
+  opacity:.52;
+}
+.manifesto-v25-principle h2{
+  margin:0;
+  font-size:clamp(72px,9.4vw,158px);
+  line-height:.78;
+  letter-spacing:-.075em;
+  font-weight:500;
+  white-space:nowrap;
+}
+.manifesto-v25-principle h2 span{
+  -webkit-text-stroke:1.5px #011C1C;
+  color:transparent;
+}
+.manifesto-v25-destination{
+  max-width:500px;
+  padding-bottom:4px;
+}
+.manifesto-v25-destination p{
+  margin:0;
+  font-size:clamp(28px,2.7vw,46px);
+  line-height:1.02;
+  letter-spacing:-.045em;
+  font-weight:500;
+}
+.manifesto-v25-shifts{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  border-top:1px solid rgba(1,28,28,.48);
+}
+.manifesto-v25-shift{
+  min-height:240px;
+  padding:20px 22px 4px 0;
+  border-right:1px solid rgba(1,28,28,.28);
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+.manifesto-v25-shift:not(:first-child){
+  padding-left:22px;
+}
+.manifesto-v25-shift:last-child{
+  border-right:0;
+}
+.manifesto-v25-shift span{
+  font-size:10px;
+  letter-spacing:.08em;
+  opacity:.48;
+}
+.manifesto-v25-shift strong{
+  display:block;
+  max-width:95%;
+  font-size:clamp(27px,2.45vw,41px);
+  line-height:.92;
+  letter-spacing:-.055em;
+  font-weight:560;
+}
+.manifesto-v25-shift{
+  transition:background .28s ease, padding .28s ease, color .28s ease;
+}
+@media(hover:hover){
+  .manifesto-v25-shift:hover{
+    background:#011C1C;
+    color:#66F3ED;
+    padding-left:22px;
+  }
+}
+@media(max-width:1024px){
+  .manifesto-v25-top{
+    grid-template-columns:1fr;
+    gap:52px;
+    align-items:start;
+  }
+  .manifesto-v25-principle h2{
+    font-size:clamp(72px,12vw,120px);
+  }
+  .manifesto-v25-destination{
+    max-width:760px;
+    padding-top:32px;
+    border-top:1px solid rgba(1,28,28,.28);
+  }
+  .manifesto-v25-destination p{
+    font-size:clamp(34px,5vw,52px);
+  }
+  .manifesto-v25-shifts{
+    grid-template-columns:repeat(2,1fr);
+  }
+  .manifesto-v25-shift{
+    min-height:210px;
+    border-bottom:1px solid rgba(1,28,28,.28);
+  }
+  .manifesto-v25-shift:nth-child(2){
+    border-right:0;
+  }
+}
+@media(max-width:680px){
+  .manifesto-v25-wrap{
+    padding-top:72px;
+    padding-bottom:72px;
+  }
+  .manifesto-v25-top{
+    gap:36px;
+    padding-bottom:58px;
+  }
+  .manifesto-v25-eyebrow{
+    margin-bottom:14px;
+  }
+  .manifesto-v25-principle h2{
+    white-space:normal;
+    font-size:clamp(58px,17vw,82px);
+    line-height:.82;
+  }
+  .manifesto-v25-principle h2 span{
+    -webkit-text-stroke:1px #011C1C;
+  }
+  .manifesto-v25-destination{
+    padding-top:24px;
+  }
+  .manifesto-v25-destination p{
+    font-size:34px;
+    line-height:1;
+  }
+  .manifesto-v25-shifts{
+    grid-template-columns:1fr 1fr;
+  }
+  .manifesto-v25-shift,
+  .manifesto-v25-shift:not(:first-child){
+    min-height:172px;
+    padding:14px;
+  }
+  .manifesto-v25-shift:nth-child(odd){
+    padding-left:0;
+  }
+  .manifesto-v25-shift strong{
+    font-size:22px;
+    line-height:.95;
+  }
+}
+
+
+/* ===== V26 — display typography breathing room ===== */
+.intro-statement{
+  line-height:1.02 !important;
+}
+.question-row p{
+  line-height:1.08 !important;
+}
+.journey-head h2{
+  line-height:1.01 !important;
+}
+.edge-title{
+  line-height:1.01 !important;
+}
+.quote-section blockquote,
+.space-copy h2,
+.format-top h2,
+.footer-line{
+  line-height:1.01 !important;
+}
+.manifesto-v25-principle h2{
+  line-height:.84 !important;
+}
+.manifesto-v25-destination p{
+  line-height:1.07 !important;
+}
+.journey-closing-statement h3{
+  line-height:1.02 !important;
+}
+
+@media(max-width:1024px){
+  .intro-statement{line-height:1.04 !important;}
+  .question-row p{line-height:1.10 !important;}
+  .journey-head h2,
+  .edge-title,
+  .quote-section blockquote,
+  .space-copy h2,
+  .format-top h2,
+  .footer-line{line-height:1.04 !important;}
+  .manifesto-v25-principle h2{line-height:.87 !important;}
+  .manifesto-v25-destination p{line-height:1.09 !important;}
+}
+
+@media(max-width:680px){
+  .intro-statement{line-height:1.07 !important;}
+  .question-row p{line-height:1.12 !important;}
+  .journey-head h2,
+  .edge-title,
+  .quote-section blockquote,
+  .space-copy h2,
+  .format-top h2,
+  .footer-line{line-height:1.07 !important;}
+  .manifesto-v25-principle h2{line-height:.90 !important;}
+  .manifesto-v25-destination p{line-height:1.10 !important;}
+}
+
+</style>
 </head>
 <body>
   <header class="nav" id="nav">
@@ -1310,31 +1910,25 @@
     <section class="journey" id="journey">
       <div class="wrap">
         <div class="journey-head reveal">
-          <h2>4A — bốn năng lực<br>Account cần nâng cấp.</h2>
-          <p>Chương trình đi theo chính dòng công việc của Account: hiểu đúng bài toán → đưa các bên về cùng một hướng → chuyển thông tin thành recommendation → xây một cách làm ngày càng hiệu quả và có dấu ấn riêng.</p>
+          <h2>4A — bốn năng lực Account cần nâng cấp.</h2>
+          <p>4A không phải quy trình xử lý task. Đây là một kỷ luật tư duy giúp Account nhận diện cách mình đang nhìn vấn đề, mở rộng góc nhìn, hình thành quan điểm có cơ sở và liên tục nâng chuẩn judgement của chính mình.</p>
         </div>
 
         <article class="module reveal">
           <div class="num">01</div>
           <h3>Assess</h3>
           <div class="module-copy">
-            <p><strong>Đọc bài toán trước khi nhận task.</strong> Học cách tách request khỏi problem; xác định business context, communication objective, constraint, stakeholder, expectation, risk và điều client thực sự cần ra quyết định.</p>
-            <div class="module-apply">
-              <b>Học viên thực hành</b>
-              <span>Bóc tách brief chưa rõ</span><span>Problem Map 1 trang</span><span>Question list cho client</span><span>Risk & priority check</span>
-            </div>
+            <p><strong>Nhận diện cách mình đang nhìn vấn đề.</strong> Trước khi phân tích, Account cần nhận ra mình đang nhìn vấn đề từ đâu và điều gì đang chi phối cách nhìn đó. Kinh nghiệm cũ, dữ kiện đang có, quan điểm của client, ý kiến của team hay chính cách câu hỏi được đặt ra đều có thể khiến ta vô thức đi theo một hướng nhất định.</p>
+            <p>Assess rèn khả năng <strong>tách điều mình biết khỏi điều mình đang suy diễn, nhận diện assumption và bias, đồng thời nhìn thấy những khả năng mình chưa đặt lên bàn</strong>. Không phải để nghĩ phức tạp hơn, mà để tránh đi quá nhanh đến một kết luận chỉ vì nó quen thuộc.</p>
           </div>
         </article>
 
         <article class="module reveal">
           <div class="num">02</div>
-          <h3>Align</h3>
+          <h3>Analyze</h3>
           <div class="module-copy">
-            <p><strong>Dẫn dắt alignment thay vì chỉ chuyển tiếp thông tin.</strong> Học cách chuẩn bị và điều phối meeting, làm rõ expectation, xác định ai cần quyết định điều gì, khóa next step và giúp Client – Strategy – Creative – Media cùng nhìn về một outcome.</p>
-            <div class="module-apply">
-              <b>Học viên thực hành</b>
-              <span>Stakeholder mapping</span><span>Meeting architecture</span><span>Decision & action log</span><span>Expectation management</span>
-            </div>
+            <p><strong>Mở rộng hệ quy chiếu trước khi chọn một cách hiểu.</strong> Một vấn đề hiếm khi chỉ có một góc nhìn đúng. Analyze giúp Account chủ động đặt cùng một vấn đề dưới nhiều hệ quy chiếu — business, client, consumer, Strategy, Creative, Media và Agency — để nhận ra những mâu thuẫn, trade-off và điểm mù mà một góc nhìn đơn lẻ dễ bỏ qua.</p>
+            <p>Mục tiêu không phải gom thật nhiều ý kiến, mà là <strong>biết góc nhìn nào đang thiếu, góc nhìn nào đang chi phối quyết định và khi nào cần thay đổi cách đặt vấn đề</strong>.</p>
           </div>
         </article>
 
@@ -1342,11 +1936,8 @@
           <div class="num">03</div>
           <h3>Advise</h3>
           <div class="module-copy">
-            <p><strong>Từ người nhận yêu cầu thành người có recommendation.</strong> Học cách đọc dữ liệu và signal, tạo hypothesis, challenge một proposal, xây options và trade-off, dự báo câu hỏi của client và chuyển insight thành một hướng hành động đủ rõ để thuyết phục.</p>
-            <div class="module-apply">
-              <b>Học viên thực hành</b>
-              <span>Insight → Recommendation</span><span>Proposal challenge</span><span>Client objection check</span><span>Pitching narrative</span>
-            </div>
+            <p><strong>Biến dữ kiện thành một quan điểm có giá trị.</strong> Account không tạo giá trị chỉ bằng việc có nhiều information, feedback hay data hơn. Giá trị xuất hiện khi bạn biết kết nối các tín hiệu, phân biệt fact với interpretation, xác định implication và từ đó hình thành một point of view đủ rõ để dẫn đến recommendation.</p>
+            <p>Advise rèn khả năng <strong>không dừng ở “điều gì đang xảy ra”, mà tiến đến “điều này có ý nghĩa gì và chúng ta nên làm gì tiếp theo”</strong>.</p>
           </div>
         </article>
 
@@ -1354,105 +1945,52 @@
           <div class="num">04</div>
           <h3>Advance</h3>
           <div class="module-copy">
-            <p><strong>Nâng cấp cách mình làm việc, không chỉ làm nhiều hơn.</strong> Học viên chọn một nhóm việc mình thường xuyên xử lý và thiết kế lại workflow: phần nào cần judgement, phần nào có thể chuẩn hóa, phần nào có thể tận dụng data, AI hoặc công cụ để research, tổng hợp, phản biện và trực quan hóa nhanh hơn.</p>
-            <div class="module-apply">
-              <b>Học viên tự xây</b>
-              <span>01 personal workflow</span><span>01 quality checklist</span><span>01 context structure</span><span>Nền tảng cho signature skill</span>
-            </div>
+            <p><strong>Liên tục nâng chuẩn tư duy của chính mình.</strong> Một recommendation tốt không chỉ cần logic hợp lý, mà còn phải chịu được phản biện. Advance rèn thói quen tự challenge assumptions, evidence, feasibility, trade-off và anticipated objections trước khi bảo vệ một quan điểm.</p>
+            <p>Qua quá trình đó, học viên dần nhận diện <strong>cách mình suy nghĩ tốt nhất, điểm mình thường mắc kẹt và cách mình muốn tiếp tục hoàn thiện personal working method</strong> theo kinh nghiệm thực tế.</p>
           </div>
         </article>
-      </div>
+
+        </div>
     </section>
 
-    <section class="manifesto" id="principle">
-      <div class="wrap">
-        <p class="manifesto-line reveal">TƯ DUY TRƯỚC.</p>
-        <p class="manifesto-line outline reveal">CÔNG CỤ SAU.</p>
-        <div class="principles">
-          <div class="principle reveal">
-            <b>Hiểu bài toán trước khi làm đầu ra.</b>
-            <p>Đừng bắt đầu bằng deck, timeline hay một câu lệnh cho AI. Trước hết phải hiểu client đang muốn thay đổi điều gì, điều gì còn thiếu và quyết định nào đang cần được đưa ra.</p>
+    <section class="manifesto manifesto-v25" id="principle">
+      <div class="wrap manifesto-v25-wrap">
+        <div class="manifesto-v25-top reveal">
+          <div class="manifesto-v25-principle">
+            <span class="manifesto-v25-eyebrow">NGUYÊN TẮC</span>
+            <h2>TƯ DUY TRƯỚC.<br><span>CÔNG CỤ SAU.</span></h2>
           </div>
-          <div class="principle reveal">
-            <b>Ngữ cảnh quyết định chất lượng.</b>
-            <p>Cùng một yêu cầu nhưng khác client, stakeholder, ngân sách hay thời điểm sẽ dẫn đến cách xử lý khác nhau. Account cần giữ được bối cảnh trước khi tìm cách làm nhanh hơn.</p>
+
+          <div class="manifesto-v25-destination">
+            <span class="manifesto-v25-eyebrow">ĐÍCH ĐẾN</span>
+            <p>Đích đến không phải là biết thêm. Mà là nghĩ khác đi, làm tốt hơn và dần có một cách làm mang dấu ấn của chính mình.</p>
           </div>
-          <div class="principle reveal">
-            <b>Đi thêm một bước sau thông tin.</b>
-            <p>Tổng hợp chưa phải là giá trị cuối cùng. Account cần biết điều gì đáng chú ý, vì sao nó quan trọng và nên đề xuất hướng nào tiếp theo.</p>
+        </div>
+
+        <div class="manifesto-v25-shifts reveal" aria-label="Bốn chuyển dịch">
+          <div class="manifesto-v25-shift">
+            <span>01</span>
+            <strong>NGHĨ<br>SÂU HƠN</strong>
           </div>
-          <div class="principle reveal">
-            <b>Công cụ chỉ tốt khi làm phán đoán tốt hơn.</b>
-            <p>AI, dữ liệu và các công cụ số chỉ nên tham gia khi chúng giúp mở rộng góc nhìn, kiểm tra logic hoặc giảm phần việc lặp lại. Trách nhiệm với recommendation vẫn thuộc về Account.</p>
+          <div class="manifesto-v25-shift">
+            <span>02</span>
+            <strong>DÙNG AI<br>THÔNG MINH HƠN</strong>
+          </div>
+          <div class="manifesto-v25-shift">
+            <span>03</span>
+            <strong>LÀM KHÁC ĐI<br>TỪ THẾ MẠNH<br>CỦA MÌNH</strong>
+          </div>
+          <div class="manifesto-v25-shift">
+            <span>04</span>
+            <strong>XÂY JUDGEMENT<br>CỦA RIÊNG MÌNH</strong>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="edge">
-      <div class="wrap edge-layout">
-        <h2 class="edge-title reveal">Không học “kỹ năng Account” theo kiểu chung chung. <span>Bạn sẽ tự tạo 5 tài sản làm việc.</span></h2>
+    
 
-        <div class="edge-side reveal">
-          <p class="lead"><strong>Xác định vấn đề → Tư duy đa chiều → Hình thành nhận định → Nâng chất lượng quyết định → Xây cách làm riêng.</strong></p>
-
-          <div class="edge-list signature-assets">
-            <div class="edge-item asset-row">
-              <span>
-                <strong>Xác định đúng vấn đề</strong>
-                <small>Không mặc định request, brief hay feedback của client chính là vấn đề cần giải. Account phải phân biệt được <b>business objective, communication objective, request, constraint và underlying problem</b> trước khi cùng team đi tìm lời giải.</small>
-              </span>
-              <span>01</span>
-            </div>
-
-            <div class="edge-item asset-row">
-              <span>
-                <strong>Tư duy đa chiều</strong>
-                <small>Đặt cùng một vấn đề dưới nhiều hệ quy chiếu — business, client, consumer, Strategy, Creative, Media và Agency — để nhận diện mâu thuẫn, trade-off và những yếu tố có thể làm thay đổi quyết định.</small>
-              </span>
-              <span>02</span>
-            </div>
-
-            <div class="edge-item asset-row">
-              <span>
-                <strong>Kết nối dữ kiện thành nhận định</strong>
-                <small>Không dừng ở việc tiếp nhận information, feedback hay data. Account cần biết <b>kết nối các tín hiệu → hình thành nhận định → xác định implication → nhìn ra opportunity</b> cho client và Agency.</small>
-              </span>
-              <span>03</span>
-            </div>
-
-            <div class="edge-item asset-row">
-              <span>
-                <strong>Phản biện để nâng chất lượng quyết định</strong>
-                <small>Không challenge để chứng minh mình đúng. Biết kiểm tra assumptions, logic, evidence, feasibility và anticipated objections để một recommendation trở nên vững hơn trước khi đi đến client.</small>
-              </span>
-              <span>04</span>
-            </div>
-
-            <div class="edge-item asset-row">
-              <span>
-                <strong>Hình thành tư duy làm việc riêng</strong>
-                <small>Không sao chép một framework cố định. Học viên nhận diện cách mình suy nghĩ, ra quyết định và giải quyết vấn đề; sau đó xây thành <b>personal working method</b> có thể tiếp tục hoàn thiện theo kinh nghiệm. AI tham gia như một lớp hỗ trợ để mở rộng, kiểm chứng và tăng tốc tư duy khi phù hợp.</small>
-              </span>
-              <span>05</span>
-            </div>
-          </div>
-
-          <div class="mindful-ai-note">
-            <div class="mindful-ai-kicker">DÙNG AI CÓ TƯ DUY (MINDFUL AI)</div>
-            <h3>AI không bắt đầu từ prompt. Nó bắt đầu từ việc bạn biết mình đang cần hiểu gì, kiểm chứng gì và quyết định gì.</h3>
-            <p>Từ các case thực tế, AI tạo giá trị rõ nhất khi được đặt đúng vào một mắt xích của công việc: đọc lượng thông tin lớn để tìm tín hiệu đáng chú ý, mở rộng giả thuyết trước khi chọn hướng đi, phản biện một recommendation, hoặc biến một ý tưởng thành prototype/visual để team và client nhìn thấy rõ hơn. Nhưng AI không tự biết đâu là vấn đề đáng giải, đâu là dữ liệu đáng tin hay phương án nào phù hợp với bối cảnh kinh doanh. Phần đó vẫn cần kinh nghiệm, hiểu client và phán đoán của Account.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="quote-section">
-      <div class="wrap">
-        <blockquote class="reveal">Account giỏi không phải người follow nhanh nhất. Đó là người giúp mọi người <em>hiểu vấn đề rõ hơn và đưa công việc tiến về phía trước.</em></blockquote>
-        <div class="quote-meta">ACCOUNT INTELLIGENCE LAB — Think Better. Align Better. Advise Better.</div>
-      </div>
-    </section>
+    
 
     <section class="space" id="space">
       <div class="wrap">
@@ -1604,6 +2142,13 @@
           <div class="faq-item reveal"><button class="faq-q" type="button"><span class="idx">06</span><strong>Vì sao Account đang làm việc tại ADMICRO không tham gia?</strong><span class="plus">+</span></button><div class="faq-a"><div><p>Đây là điều kiện áp dụng của chương trình ở giai đoạn hiện tại. Account đang làm việc tại ADMICRO không thuộc đối tượng chiêu sinh.</p></div></div></div>
           <div class="faq-item reveal"><button class="faq-q" type="button"><span class="idx">07</span><strong>Nếu đã thanh toán nhưng không tham gia được thì sao?</strong><span class="plus">+</span></button><div class="faq-a"><div><p>Học viên cần thanh toán 100% trước khóa học và tự đảm bảo lịch tham dự. Chương trình không áp dụng chính sách hoàn tiền, vì vậy nên kiểm tra lịch cá nhân trước khi xác nhận đăng ký.</p></div></div></div>
         </div>
+      </div>
+    </section>
+
+    <section class="quote-section">
+      <div class="wrap">
+        <blockquote class="reveal">Account giỏi không phải người follow nhanh nhất. Đó là người giúp mọi người <em>hiểu vấn đề rõ hơn và đưa công việc tiến về phía trước.</em></blockquote>
+        <div class="quote-meta">ACCOUNT INTELLIGENCE LAB — Think Better. Align Better. Advise Better.</div>
       </div>
     </section>
 
