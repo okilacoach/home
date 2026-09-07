@@ -1144,6 +1144,70 @@
       }
     }
 
+  
+    /* ===== V18 — hero eligibility note ===== */
+    .hero-admicro-note{
+      margin:16px 0 0;
+      max-width:580px;
+      font-size:11px;
+      line-height:1.45;
+      letter-spacing:.01em;
+      font-weight:450;
+      color:rgba(233,233,231,.52);
+    }
+    @media(max-width:680px){
+      .hero-admicro-note{
+        margin-top:12px;
+        max-width:94%;
+        font-size:10px;
+        line-height:1.4;
+      }
+    }
+
+  
+    /* ===== V19 — visible hero eligibility note ===== */
+    .hero-eligibility-note{
+      margin-top:14px;
+      max-width:520px;
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+      color:rgba(233,233,231,.76);
+    }
+    .hero-eligibility-note span{
+      flex:none;
+      margin-top:1px;
+      padding:4px 7px;
+      border:1px solid rgba(233,233,231,.24);
+      border-radius:999px;
+      font-size:9px;
+      line-height:1;
+      letter-spacing:.05em;
+      text-transform:uppercase;
+      color:rgba(233,233,231,.58);
+    }
+    .hero-eligibility-note p{
+      margin:0;
+      font-size:11px;
+      line-height:1.45;
+      max-width:420px;
+    }
+    @media(max-width:680px){
+      .hero-eligibility-note{
+        margin-top:10px;
+        max-width:94%;
+        gap:8px;
+      }
+      .hero-eligibility-note p{
+        font-size:10px;
+        line-height:1.4;
+      }
+      .hero-eligibility-note span{
+        font-size:8px;
+        padding:4px 6px;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -1151,7 +1215,6 @@
     <a class="logo brand-logo" href="#top" aria-label="Okila.asia — Account Intelligence Lab"><img src="assets/okila-account-intelligence-lab.png" alt="Okila.asia — Account Intelligence Lab"></a>
 
     <nav class="nav-center" aria-label="Điều hướng chính">
-      <a href="#why">Vì sao</a>
       <a href="#journey">Nội dung</a>
       <a href="#format">Lịch học</a>
       <a href="#fee">Học phí</a>
@@ -1168,7 +1231,6 @@
   <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
     <div class="mobile-menu-inner">
       <div class="mobile-menu-label">OKILA.ASIA / ACCOUNT INTELLIGENCE LAB</div>
-      <a href="#why">Vì sao</a>
       <a href="#journey">Nội dung</a>
       <a href="#format">Lịch học</a>
       <a href="#fee">Học phí</a>
@@ -1196,10 +1258,13 @@
               <small>Quét QR hoặc chạm để mở Telegram ↗</small>
             </div>
           </a>
+          <div class="hero-eligibility-note">
+            <span>Thông tin áp dụng</span>
+            <p>Khoá huấn luyện hiện không áp dụng cho nhân sự Account của ADMICRO (VCCorp).</p>
+          </div>
         </div>
       </div>
-
-      <div class="hero-visual" aria-hidden="true">
+        <div class="hero-visual" aria-hidden="true">
         <div class="hero-character-light"></div>
         <img class="hero-character-bg" id="heroCharacter" src="assets/hero-character.png" alt="">
         <div class="hero-vignette"></div>
